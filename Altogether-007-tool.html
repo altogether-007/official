@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altogether 007</title>
+
+    <meta name="title" content="Altogether 007 - All-in-One Useful Tools Hub">
+    <meta name="description" content="Altogether 007 is a versatile web portal featuring video downloaders, AI tools, games, speed testers, music, medical info, and more. All your essential tools in one place.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://altogether-007.github.io/">
+    <meta property="og:title" content="Altogether 007 - All-in-One Useful Tools Hub">
+    <meta property="og:image" content="https://i.postimg.cc/63nNfFKF/Altogether.png">
+
+    <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/63nNfFKF/Altogether.png">
+
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-color: #000;
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00bfff;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            color: #00bfff;
+            margin: 20px 0 10px 10px;
+            font-size: 18px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+            display: none;
+        }
+
+        .file-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 15px;
+            padding: 10px;
+        }
+
+        .directory-item {
+            text-align: center;
+            border-radius: 12px;
+            background-color: #1a1a1a;
+            padding: 12px;
+            border: 2px solid #00FFFF; 
+            transition: transform .3s ease, border-color .3s ease;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .directory-item:hover {
+            transform: scale(1.03);
+            border-color: #00bfff;
+            box-shadow: 0 0 10px rgba(0, 191, 255, 0.3);
+        }
+
+        .directory-item img {
+            width: 80%;
+            height: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+            border-radius: 12px;
+            border: 2px solid #00FFFF;
+            transition: transform .3s ease;
+        }
+
+        .directory-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .title-wrapper {
+            position: relative;
+            margin-top: 10px;
+            padding: 8px 28px 8px 8px;
+            border: 1px solid #00FFFF;
+            border-radius: 6px;
+            background-color: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 32px;
+        }
+
+        .tool-title {
+            text-decoration: none;
+            color: #00bfff;
+            font-weight: 700;
+            font-size: 12px;
+            white-space: normal;
+            word-break: break-word;
+            line-height: 1.3;
+            text-align: center;
+            display: block;
+            width: 100%;
+        }
+
+        .fav-star {
+            position: absolute;
+            right: 6px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+            color: #555;
+            cursor: pointer;
+            user-select: none;
+            transition: color 0.2s, transform 0.2s;
+            line-height: 1;
+        }
+
+        .fav-star:hover {
+            transform: translateY(-50%) scale(1.2);
+            color: #fff;
+        }
+
+        .fav-star.active {
+            color: #ffd700;
+            text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Altogether 007</h1>
+
+    <h2 id="fav-heading" class="section-title">⭐ FAVORITES</h2>
+    <div id="fav-container" class="file-container"></div>
+
+    <h2 id="all-heading" class="section-title" style="display:block;">ALL TOOLS</h2>
+    <div id="main-container" class="file-container">
+
+         <div class="directory-item" data-id="HTML Viewer">
+            <a href="https://altogether.unaux.com/HTMLVIW/"><img src="https://i.postimg.cc/pLYsdqBC/262200.png" alt="HTML Viewer"></a>
+            <div class="title-wrapper">
+                <a href="https://altogether.unaux.com/HTMLVIW/" class="tool-title">HTML Viewer</a>
+                <span class="fav-star" onclick="toggleFav('HTML Viewer')">★</span>
+            </div>
+        </div>
+
+        <div class="directory-item" data-id="speedtester">
+            <a href="https://altogether.unaux.com/SPEEDTESTER/"><img src="https://i.postimg.cc/NMLDpYwB/flat-illustration-of-speed-test-gauge-suitable-for-design-element-of-internet-speed-test-and-poor-or.jpg" alt="SPEED TESTER"></a>
+            <div class="title-wrapper">
+                <a href="https://altogether.unaux.com/SPEEDTESTER/" class="tool-title">SPEED TESTER</a>
+                <span class="fav-star" onclick="toggleFav('speedtester')">★</span>
+            </div>
+        </div>
+
+        <div class="directory-item" data-id="clock">
+            <a href="https://altogether.unaux.com/Clock/"><img src="https://i.postimg.cc/447wcJ5P/apple-clock.jpg" alt="CLOCK"></a>
+            <div class="title-wrapper">
+                <a href="https://altogether.unaux.com/Clock/" class="tool-title">CLOCK</a>
+                <span class="fav-star" onclick="toggleFav('clock')">★</span>
+            </div>
+        </div>
+
+    
+
+  <div class="directory-item" data-id="cashoutcharge">
+            <a href="https://altogether.unaux.com/CashoutCharge/"><img src="https://i.postimg.cc/x1YPBLSX/684240.png" alt="CashoutCharge"></a>
+            <div class="title-wrapper">
+                <a href="https://altogether.unaux.com/CashoutCharge/" class="tool-title">CashOutCharge</a>
+                <span class="fav-star" onclick="toggleFav('cashoutcharge')">★</span>
+            </div>
+        </div>
+
+        <div class="directory-item" data-id="namaztime">
+            <a href="https://altogether-007.github.io/NamazTime.html"><img src="https://i.postimg.cc/NMy8R41c/14929883.png" alt="Namaz Time"></a>
+            <div class="title-wrapper">
+                <a href="https://altogether-007.github.io/NamazTime.html" class="tool-title">Namaz Time</a>
+                <span class="fav-star" onclick="toggleFav('namaztime')">★</span>
+            </div>
+        </div>
+
+        <div class="directory-item" data-id="datecalculator">
+            <a href="https://altogether.unaux.com/DateCalculator/"><img src="https://i.postimg.cc/pXQfQynK/unnamed-(2).webp" alt="Date Calculator"></a>
+            <div class="title-wrapper">
+                <a href="https://altogether.unaux.com/DateCalculator/" class="tool-title">Date Calculator</a>
+                <span class="fav-star" onclick="toggleFav('datecalculator')">★</span>
+            </div>
+        </div>
+
+        
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <script>
+        let favorites = JSON.parse(localStorage.getItem('altogether_favs')) || [];
+
+        function sortMainContainer() {
+            const mainContainer = document.getElementById('main-container');
+            const items = Array.from(mainContainer.children);
+            items.sort((a, b) => {
+                const titleA = a.querySelector('.tool-title').innerText.trim().toUpperCase();
+                const titleB = b.querySelector('.tool-title').innerText.trim().toUpperCase();
+                return titleA.localeCompare(titleB);
+            });
+            items.forEach(item => mainContainer.appendChild(item));
+        }
+
+        function renderFavorites() {
+            const favContainer = document.getElementById('fav-container');
+            const favHeading = document.getElementById('fav-heading');
+            favContainer.innerHTML = '';
+            
+            const allItems = document.querySelectorAll('#main-container .directory-item');
+
+            allItems.forEach(item => {
+                const id = item.getAttribute('data-id');
+                const star = item.querySelector('.fav-star');
+                if (favorites.includes(id)) {
+                    star.classList.add('active');
+                    const clone = item.cloneNode(true);
+                    favContainer.appendChild(clone);
+                } else {
+                    star.classList.remove('active');
+                }
+            });
+            
+            favHeading.style.display = favorites.length > 0 ? 'block' : 'none';
+        }
+
+        function toggleFav(id) {
+            favorites = favorites.includes(id) ? favorites.filter(favId => favId !== id) : [...favorites, id];
+            localStorage.setItem('altogether_favs', JSON.stringify(favorites));
+            renderFavorites();
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            sortMainContainer();
+            renderFavorites();
+        });
+    </script>
+</body>
+</html>
